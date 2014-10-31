@@ -1,0 +1,32 @@
+{
+    "title": "Konami Code listener and handler",
+    "name": "konami-code",
+    "description": "A class to listen for and handle the Konami Code input.",
+    "version": "0.1.0",
+    "homepage": "https://github.com/kitajchuk/konami-code",
+    "readmeFilename": "README.md",
+    "contributors": [
+        {
+            "name": "Brandon Kitajchuk",
+            "email": "kitajchuk@gmail.com",
+            "url": "http://blkpdx.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/kitajchuk/konami-code.git"
+    },
+    "bugs": {
+        "url": "https://github.com/kitajchuk/konami-code/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/kitajchuk/konami-code/blob/master/LICENSE"
+        }
+    ],
+    "main": "KonamiCode",
+    "keywords": [
+        "konami"
+    ]
+}
