@@ -1,6 +1,6 @@
 {
     "title": "Konami Code listener and handler",
-    "name": "konami-code",
+    "name": "KonamiCode",
     "description": "A class to listen for and handle the Konami Code input.",
     "version": "0.1.1",
     "homepage": "https://github.com/kitajchuk/KonamiCode",
