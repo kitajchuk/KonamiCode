@@ -1,7 +1,7 @@
 konami-code
 ===========
 
-> A Konami Code class to listen and handle the input: up, up, down, down, left, right, left, right, b, a.
+> Listen and handle the input: up, up, down, down, left, right, left, right, b, a. Game on!
 
 
 
