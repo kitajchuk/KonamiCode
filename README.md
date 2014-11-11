@@ -1,5 +1,5 @@
-konami-code
-===========
+KonamiCode
+==========
 
 > Listen and handle the input: up, up, down, down, left, right, left, right, b, a. Game on!
 
