@@ -3,7 +3,7 @@
     "name": "konami-code",
     "description": "A class to listen for and handle the Konami Code input.",
     "version": "0.1.0",
-    "homepage": "https://github.com/kitajchuk/konami-code",
+    "homepage": "https://github.com/kitajchuk/KonamiCode",
     "readmeFilename": "README.md",
     "contributors": [
         {
@@ -14,15 +14,15 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git://github.com/kitajchuk/konami-code.git"
+        "url": "git://github.com/ProperJS/KonamiCode.git"
     },
     "bugs": {
-        "url": "https://github.com/kitajchuk/konami-code/issues"
+        "url": "https://github.com/ProperJS/KonamiCode/issues"
     },
     "licenses": [
         {
             "type": "MIT",
-            "url": "https://github.com/kitajchuk/konami-code/blob/master/LICENSE"
+            "url": "https://github.com/ProperJS/KonamiCode/blob/master/LICENSE"
         }
     ],
     "main": "KonamiCode",
