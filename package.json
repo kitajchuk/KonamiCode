@@ -1,8 +1,8 @@
 {
-    "title": "Konami Code listener and handler",
+    "title": "Konami Code",
     "name": "konami-code",
     "description": "A class to listen for and handle the Konami Code input.",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "homepage": "https://github.com/ProperJS/KonamiCode",
     "readmeFilename": "README.md",
     "contributors": [
@@ -27,6 +27,11 @@
     ],
     "main": "KonamiCode",
     "keywords": [
-        "konami"
-    ]
+        "properjs",
+        "konami code",
+        "easter egg"
+    ],
+    "scripts": {
+        "test": "webpack test/test.js test/dist/common.js ; cp KonamiCode.js test/dist/browser.js"
+    }
 }

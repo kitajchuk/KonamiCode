@@ -8,12 +8,13 @@ KonamiCode
 ## Installation
 
 ```shell
-npm install konami-code
+npm install konami-code --save-dev
 ```
 
 
 ## Usage
 ```javascript
+var KonamiCode = require( "konami-code" );
 var konami = new KonamiCode();
 
 konami.listen(function () {
