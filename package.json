@@ -2,7 +2,7 @@
     "title": "Konami Code",
     "name": "konami-code",
     "description": "A class to listen for and handle the Konami Code input.",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "homepage": "https://github.com/ProperJS/KonamiCode",
     "readmeFilename": "README.md",
     "contributors": [
