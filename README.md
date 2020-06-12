@@ -1,23 +1,26 @@
-KonamiCode
-==========
+ProperJS // KonamiCode
+======================
 
-> Listen and handle the input: up, up, down, down, left, right, left, right, b, a. Game on!
+> up, up, down, down, left, right, left, right, b, a. Game on!
 
 
 
-## Installation
+### Installation
 
 ```shell
-npm install konami-code --save-dev
+npm i konami-code --save-dev
 ```
 
 
-## Usage
-```javascript
-var KonamiCode = require( "konami-code" );
-var konami = new KonamiCode();
 
-konami.listen(function () {
-    // Do cool stuff here...
+### Usage
+```javascript
+import KonamiCode from "konami-code";
+
+const konami = new KonamiCode();
+
+konami.listen(() => {
+    // Easter egg!!!
+    console.log( "konami code!" );
 });
 ```

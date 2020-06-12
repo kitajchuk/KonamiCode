@@ -1,8 +1,8 @@
-var KonamiCode = require( "../KonamiCode" );
+import KonamiCode from "../KonamiCode";
 
-var konami = new KonamiCode();
+const konami = new KonamiCode();
 
-konami.listen(function () {
-    // Do cool stuff here...
-    console.log( "code!" );
+konami.listen(() => {
+    // Easter egg!!!
+    console.log( "konami code!" );
 });

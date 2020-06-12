@@ -1,15 +1,15 @@
 {
-    "title": "Konami Code",
+    "title": "KonamiCode",
     "name": "konami-code",
-    "description": "A class to listen for and handle the Konami Code input.",
-    "version": "0.2.1",
+    "description": "up, up, down, down, left, right, left, right, b, a. Game on!",
+    "version": "0.3.0",
     "homepage": "https://github.com/ProperJS/KonamiCode",
     "readmeFilename": "README.md",
     "contributors": [
         {
-            "name": "Brandon Kitajchuk",
-            "email": "kitajchuk@gmail.com",
-            "url": "http://blkpdx.com"
+            "name": "Brandon Lee Kitajchuk",
+            "email": "bk@kitajchuk.com",
+            "url": "https://kitajchuk.com"
         }
     ],
     "repository": {
@@ -31,7 +31,20 @@
         "konami code",
         "easter egg"
     ],
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.9.0",
+        "@babel/polyfill": "^7.8.7",
+        "@babel/preset-env": "^7.9.0",
+        "babel-loader": "^8.1.0",
+        "eslint": "^7.2.0",
+        "eslint-loader": "^4.0.2",
+        "webpack": "^4.42.0",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.11.0"
+    },
     "scripts": {
-        "test": "webpack test/test.js test/dist/common.js ; cp KonamiCode.js test/dist/browser.js"
+        "test": "./node_modules/.bin/webpack --progress --profile --display-modules --colors",
+        "start": "npm run test ; node_modules/.bin/webpack-dev-server"
     }
 }

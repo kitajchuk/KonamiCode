@@ -1,134 +1,49 @@
-/*!
- *
- * A konami code easter egg handler
- *
- * @KonamiCode
- * @author: kitajchuk
- *
- *
- */
-(function ( factory ) {
+export default class KonamiCode {
+    constructor () {
+        this._code = "38384040373937396665";
+        this._delay = 256;
+        this._callbacks = [];
+        this._timeout = null;
 
-    if ( typeof exports === "object" && typeof module !== "undefined" ) {
-        module.exports = factory();
-
-    } else if ( typeof window !== "undefined" ) {
-        window.KonamiCode = factory();
+        this.bind();
     }
 
-})(function () {
 
+    bind () {
+        let code = "";
 
-    var _code = "38384040373937396665";
+        document.addEventListener( "keydown", ( e ) => {
+            clearTimeout( this._timeout );
 
+            code = `${code}${e.keyCode}`;
 
-    /**
-     *
-     * A konami code easter egg handler
-     * @constructor KonamiCode
-     * @memberof! <global>
-     *
-     */
-    var KonamiCode = function () {
-        return this.init.apply( this, arguments );
-    };
-
-
-    KonamiCode.prototype = {
-        constructor: KonamiCode,
-
-        /**
-         *
-         * KonamiCode init constructor method
-         * @memberof KonamiCode
-         * @method KonamiCode.init
-         *
-         */
-        init: function () {
-            /**
-             *
-             * Timeout between key inputs to reset
-             * @memberof KonamiCode
-             * @member KonamiCode._delay
-             *
-             */
-            this._delay = 500;
-
-            /**
-             *
-             * All supplied callbacks to this instance
-             * @memberof KonamiCode
-             * @member KonamiCode._callbacks
-             *
-             */
-            this._callbacks = [];
-
-            /**
-             *
-             * Timeout reference
-             * @memberof KonamiCode
-             * @member KonamiCode._timeout
-             *
-             */
-            this._timeout = null;
-
-            var code = "",
-                self = this,
-                handler = function ( e ) {
-                    try {
-                        clearTimeout( self._timeout );
-
-                    } catch ( error ) {}
-
-                    code = String( code + e.keyCode );
-
-                    if ( code === _code ) {
-                        self._dispatch( "konami" );
-                    }
-
-                    self._timeout = setTimeout(function () {
-                        clearTimeout( self._timeout );
-
-                        code = "";
-
-                    }, self._delay );
-                };
-
-            document.addEventListener( "keydown", handler, false );
-        },
-
-        /**
-         *
-         * Listen for the konami code input
-         * @memberof KonamiCode
-         * @method KonamiCode.listen
-         * @param {function} callback The function to call on input
-         *
-         */
-        listen: function ( callback ) {
-            if ( typeof callback === "function" ) {
-                this._callbacks.push( callback );
+            if ( code === this._code ) {
+                this._dispatch();
             }
 
-            return this;
-        },
+            this._timeout = setTimeout(() => {
+                clearTimeout( this._timeout );
 
-        /**
-         *
-         * Internal dispatcher when konami code input is matched
-         * @memberof KonamiCode
-         * @method KonamiCode._dispatch
-         *
-         */
-        _dispatch: function () {
-            for ( var i = this._callbacks.length; i--; ) {
-                this._callbacks[ i ]();
-            }
+                code = "";
+
+            }, this._delay );
+
+        }, false );
+    }
+
+
+    listen ( callback ) {
+        if ( typeof callback === "function" ) {
+            this._callbacks.push( callback );
         }
-    };
+
+        return this;
+    }
 
 
-    return KonamiCode;
-
-
-});
+    _dispatch () {
+        for ( let i = this._callbacks.length; i--; ) {
+            this._callbacks[ i ].call();
+        }
+    }
+}
