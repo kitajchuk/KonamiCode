@@ -1,5 +1,5 @@
 export default class KonamiCode {
-    constructor () {
+    constructor (delay) {
         this._code = "38384040373937396665";
         this._delay = delay ? delay : 500;
         this._callbacks = [];
