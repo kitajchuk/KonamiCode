@@ -25,7 +25,7 @@
             "url": "https://github.com/ProperJS/KonamiCode/blob/master/LICENSE"
         }
     ],
-    "main": "KonamiCode",
+    "main": "KonamiCode.js",
     "keywords": [
         "properjs",
         "konami code",
